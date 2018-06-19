@@ -57,7 +57,7 @@ router.get('/:productId', (req, res, next) => {
 
             console.log(err);
             res.status(500).json({
-                error:err
+                error: err
             })
         })
 })
@@ -74,10 +74,10 @@ router.post('/', (req, res, next) => {
     product.save().then(result => {
         console.log('===> ' + result);
         res.status(200).json({
-            createdProduct:{
-            message: 'product is created',
-            product: product
-        }
+            createdProduct: {
+                message: 'product is created',
+                product: product
+            }
         });
     })
         .catch(err => {
