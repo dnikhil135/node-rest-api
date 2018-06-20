@@ -1,25 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const orderController = require('../controller/orderController')
 
-router.get("/",(req, res, next) => {
-    res.status(200).json({
-        message:'This handle request for GET for order'
-    });
-});
+router.get("/",orderController.get_all_order);
 
-router.post('/', (req, res, next) => {
-res.status(200).json({
-        message:'This handle POST request for order service.'
-    });
-});
+// router.post('/', orderController.post_order);
 
-router.get('/:orderId',(req, res, next) => {
-    var orderId = req.params.orderId;
-    console.log(orderId);
-    res.status(201).json({
-        message:'This is handle request for order with orderId ==> '+orderId,
-        orderId:orderId
-    });
-});
+router.get('/:orderId',orderController.get_order_on_orderid);
 
 module.exports=router;
