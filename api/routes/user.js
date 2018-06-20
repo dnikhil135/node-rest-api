@@ -8,7 +8,7 @@ const userController = require('../controller/userController');
 
 router.post('/signup', userController.signup);
 
-router.delete('/:id',userController.delete_user)
+router.delete('/:id', userController.delete_user)
 
 router.get('/findAll', userController.finall_user)
 

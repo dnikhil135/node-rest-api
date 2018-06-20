@@ -4,7 +4,7 @@ var amqp = require('amqplib/callback_api');
 const xmlparseController = require('../controller/xmlparseController');
 
 //API to handle POST resquest with XML Body.
-router.post('/', xmlparseController.xml_parse );
+router.post('/', xmlparseController.xml_parse);
 
 module.exports = router;
 
